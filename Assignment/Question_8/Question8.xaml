@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question8" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,1190.4" sap2010:WorkflowViewState.IdRef="Question8_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question8" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="887,1335" sap2010:WorkflowViewState.IdRef="Question8_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -76,7 +76,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Question8: Sum of two numbers " sap:VirtualizedContainerService.HintSize="416,1125.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap2010:Annotation.AnnotationText="This is used to find sum of two numbers by passing arguments " DisplayName="Question8: Sum of two numbers " sap:VirtualizedContainerService.HintSize="416,1270" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="FirstNumber" />
       <Variable x:TypeArguments="x:Int32" Name="Result" />
@@ -85,26 +85,49 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog: First number " sap:VirtualizedContainerService.HintSize="353.6,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Enter the first number" Title="Sum of two numbers ">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to find the first number " DisplayName="Input Dialog: First number " sap:VirtualizedContainerService.HintSize="354,302" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Enter the first number" Title="Sum of two numbers ">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:Int32">[FirstNumber]</OutArgument>
       </ui:InputDialog.Result>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InputDialog>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog: Second number " sap:VirtualizedContainerService.HintSize="353.6,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Enter the second number" Title="Sum of two numbers ">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to find the second number " DisplayName="Input Dialog: Second number " sap:VirtualizedContainerService.HintSize="354,302" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Enter the second number" Title="Sum of two numbers ">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:Int32">[SecondNumber]</OutArgument>
       </ui:InputDialog.Result>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InputDialog>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="InvokedFile - Invoke Workflow File (Assignment\Question8Result.xaml)" sap:VirtualizedContainerService.HintSize="353.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Assignment\Question8Result.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="InvokedFile - Invoke Workflow File (Assignment\Question_8\InvokedFile.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Assignment\Question_8\InvokedFile.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:Int32" x:Key="In_FirstNumber">[FirstNumber]</InArgument>
-        <InArgument x:TypeArguments="x:Int32" x:Key="In_SecondNumber">[SecondNumber]</InArgument>
-        <OutArgument x:TypeArguments="x:Int32" x:Key="Out_Sum">[Result]</OutArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_FirstNumber">[FirstNumber]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_SecondNumber">[SecondNumber]</InArgument>
+        <OutArgument x:TypeArguments="x:Int32" x:Key="out_Sum">[Result]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box: Display the sum " sap:VirtualizedContainerService.HintSize="353.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;The sum of &quot; +FirstNumber.ToString + &quot;and &quot; +SecondNumber.ToString+ &quot; is&quot;+Result.ToString]" />
-    <ui:LogMessage DisplayName="Log Message : Sum" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;The sum of &quot; +FirstNumber.ToString + &quot;and &quot; +SecondNumber.ToString+ &quot; is&quot;+Result.ToString]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to display the sum value " AutoCloseAfter="00:00:00" DisplayName="Message Box: Display the sum " sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;The sum of &quot; +FirstNumber.ToString + &quot;and &quot; +SecondNumber.ToString+ &quot; is&quot;+Result.ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MessageBox>
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log value of sum" DisplayName="Log Message : Sum" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;The sum of &quot; +FirstNumber.ToString + &quot;and &quot; +SecondNumber.ToString+ &quot; is&quot;+Result.ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
   </Sequence>
 </Activity>

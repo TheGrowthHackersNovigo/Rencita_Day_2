@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,2881.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="887,3072" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -74,7 +74,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="The following steps are done to evaluate whether the entered number is a prime number or not a prime number" DisplayName="Main Sequence: To Find the Lcm of two numbers" sap:VirtualizedContainerService.HintSize="688,2816.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="This activity is used to To find LCM of two numbers " DisplayName="Main Sequence: To Find the Lcm of two numbers" sap:VirtualizedContainerService.HintSize="688,3007" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="FirstNumber" />
       <Variable x:TypeArguments="x:Int32" Name="SecondNumber" />
@@ -88,7 +88,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to take users input" DisplayName="Input Dialog:Ask the user input" sap:VirtualizedContainerService.HintSize="625.6,304.8" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter the first number" Title="LCM of two numbers ">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to take users input" DisplayName="Input Dialog:Ask the user input" sap:VirtualizedContainerService.HintSize="626,302" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter the first number" Title="LCM of two numbers ">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:Int32">[FirstNumber]</OutArgument>
       </ui:InputDialog.Result>
@@ -98,7 +98,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InputDialog>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to take users input" DisplayName="Input Dialog:Second Input " sap:VirtualizedContainerService.HintSize="625.6,304.8" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the second number" Title="LCM of two numbers ">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to take users input" DisplayName="Input Dialog:Second Input " sap:VirtualizedContainerService.HintSize="626,302" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the second number" Title="LCM of two numbers ">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:Int32">[SecondNumber]</OutArgument>
       </ui:InputDialog.Result>
@@ -108,28 +108,28 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InputDialog>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to display users input" DisplayName="Log Message: Display users input" sap:VirtualizedContainerService.HintSize="625.6,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;User entered &quot; + FirstNumber.ToString + &quot;and &quot; + SecondNumber.ToString + &quot; as second number&quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to display users input" DisplayName="Log Message: Display users input" sap:VirtualizedContainerService.HintSize="626,204" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;User entered &quot; + FirstNumber.ToString + &quot;and &quot; + SecondNumber.ToString + &quot; as second number&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <If sap2010:Annotation.AnnotationText="This activity is used to find the LCM" Condition="[FirstNumber&lt;SecondNumber]" DisplayName="If:Check" sap:VirtualizedContainerService.HintSize="625.6,651.2" sap2010:WorkflowViewState.IdRef="If_1">
+    <If sap2010:Annotation.AnnotationText="This activity is used to find the LCM" Condition="[FirstNumber&lt;SecondNumber]" DisplayName="If:Check" sap:VirtualizedContainerService.HintSize="626,649" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap2010:Annotation.AnnotationText="Used to assign greater number to a variable" DisplayName="Then: SecondNumber is greater" sap:VirtualizedContainerService.HintSize="496,224.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence sap2010:Annotation.AnnotationText="Used to assign greater number to a variable" DisplayName="Then: SecondNumber is greater" sap:VirtualizedContainerService.HintSize="496,224" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Assign:Second number is GreaterNumber" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign DisplayName="Assign:Second number is GreaterNumber" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[Largest]</OutArgument>
             </Assign.To>
@@ -140,14 +140,14 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap2010:Annotation.AnnotationText="Used to assign greater number to a variable" DisplayName="Else: First number is greater" sap:VirtualizedContainerService.HintSize="496,224.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence sap2010:Annotation.AnnotationText="Used to assign greater number to a variable" DisplayName="Else: First number is greater" sap:VirtualizedContainerService.HintSize="496,224" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Assign: First number is greater" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign DisplayName="Assign: First number is greater" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[Largest]</OutArgument>
             </Assign.To>
@@ -158,54 +158,77 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This activity loops till the least comman muliple of the two given number is found " Condition="True" DisplayName="While: Iterate to find largest multiple" sap:VirtualizedContainerService.HintSize="625.6,1121.6" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This activity loops till the least comman muliple of the two given number is found " Condition="True" DisplayName="While: Iterate to find largest multiple" sap:VirtualizedContainerService.HintSize="626,1281" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body:  Iterate to find the LCM" sap:VirtualizedContainerService.HintSize="592,944" sap2010:WorkflowViewState.IdRef="Sequence_9">
+        <Sequence sap2010:Annotation.AnnotationText="This acitivity is used to iterate in order  find LCM  " DisplayName="Body:  Iterate to find the LCM" sap:VirtualizedContainerService.HintSize="592,1104" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If sap2010:Annotation.AnnotationText="This checks if a number is product of both the given number" Condition="[(Largest Mod FirstNumber = 0) AndAlso (Largest Mod SecondNumber = 0)]" DisplayName="If: number is factor of both the given number" sap:VirtualizedContainerService.HintSize="529.6,855.2" sap2010:WorkflowViewState.IdRef="If_2">
+          <If sap2010:Annotation.AnnotationText="This checks if a number is product of both the given number" Condition="[(Largest Mod FirstNumber = 0) AndAlso (Largest Mod SecondNumber = 0)]" DisplayName="If: number is factor of both the given number" sap:VirtualizedContainerService.HintSize="530,985" sap2010:WorkflowViewState.IdRef="If_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap2010:Annotation.AnnotationText="If  a number is product of both the given number  then multple the two numbers to get LCM" DisplayName="Then : Multiply to find LCM" sap:VirtualizedContainerService.HintSize="496,468.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence sap2010:Annotation.AnnotationText="If  a number is product of both the given number  then multple the two numbers to get LCM" DisplayName="Then : Multiply to find LCM" sap:VirtualizedContainerService.HintSize="496,569" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign DisplayName="Assign:LCM" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign sap2010:Annotation.AnnotationText="This activity is used to calculate the LCM" DisplayName="Assign:LCM" sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="Assign_3">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[Lcm]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
                     <InArgument x:TypeArguments="x:Int32">[FirstNumber * SecondNumber]</InArgument>
                   </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                 </Assign>
-                <ui:LogMessage DisplayName="Log Message &quot;: Display LCM" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot; The LCM is &quot; +LCM.ToString]" />
-                <ui:Break DisplayName="Break:Step" sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="Break_1" />
+                <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log the LCM value " DisplayName="Log Message &quot;: Display LCM" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot; The LCM is &quot; +LCM.ToString]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <ui:Break sap2010:Annotation.AnnotationText="This activity is used to break the loop since the LCM is calculated " DisplayName="Break:Step" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Break_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:Break>
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else:Increment" sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Else:Increment" sap:VirtualizedContainerService.HintSize="496,224" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign DisplayName="Assign:Increment" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign sap2010:Annotation.AnnotationText="This activity is used to increeent the variable -Largest " DisplayName="Assign:Increment" sap:VirtualizedContainerService.HintSize="434,136" sap2010:WorkflowViewState.IdRef="Assign_4">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[Largest]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
                     <InArgument x:TypeArguments="x:Int32">[Largest + 1]</InArgument>
                   </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                 </Assign>
               </Sequence>
             </If.Else>
@@ -218,6 +241,12 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InterruptibleWhile>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box:Display" sap:VirtualizedContainerService.HintSize="625.6,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The Lcm of the given numbers is &quot; + Lcm.ToString()]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText=" This activity is used to this activity is used to display the LCM value " AutoCloseAfter="00:00:00" DisplayName="Message Box:Display" sap:VirtualizedContainerService.HintSize="626,150" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The Lcm of the given numbers is &quot; + Lcm.ToString()]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MessageBox>
   </Sequence>
 </Activity>

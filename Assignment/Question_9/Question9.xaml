@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question9" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,2836.8" sap2010:WorkflowViewState.IdRef="Question9_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question9" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="887,3427" sap2010:WorkflowViewState.IdRef="Question9_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -81,85 +81,167 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Question9:Students Grade " sap:VirtualizedContainerService.HintSize="512,2772" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This is used to assign grade of the student based on the marks " DisplayName="Question9:Students Grade " sap:VirtualizedContainerService.HintSize="512,3362" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="Marks" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog: Students marks " sap:VirtualizedContainerService.HintSize="449.6,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the students mark " Title="Grade Calculator">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to Ask users input " DisplayName="Input Dialog: Students marks " sap:VirtualizedContainerService.HintSize="450,302" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the students mark " Title="Grade Calculator">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:Int32">[Marks]</OutArgument>
       </ui:InputDialog.Result>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InputDialog>
-    <ui:LogMessage DisplayName="Log Message : Users input" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Student's mark is &quot; + Marks.ToString]" />
-    <ui:IfElseIfV2 Condition="[Marks &gt;= 80 and Marks &lt;=100]" DisplayName="Else If : Display grade using marks " sap:VirtualizedContainerService.HintSize="449.6,2235.2" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to display log message of users " DisplayName="Log Message : Users input" sap:VirtualizedContainerService.HintSize="450,204" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Student's mark is &quot; + Marks.ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:IfElseIfV2 sap2010:Annotation.AnnotationText="This activity is used to evaluate the grade based on marks" Condition="[Marks &gt;= 80 and Marks &lt;=100]" DisplayName="Else If : Display grade using marks " sap:VirtualizedContainerService.HintSize="450,2737" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
       <ui:IfElseIfV2.Else>
-        <Sequence DisplayName="Else : Invalid input" sap:VirtualizedContainerService.HintSize="416,372" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap2010:Annotation.AnnotationText="this activity is displayed if users input is invalid " DisplayName="Else : Invalid input" sap:VirtualizedContainerService.HintSize="416,462" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : Error message" sap:VirtualizedContainerService.HintSize="353.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Input is invalid! Please enter a number between 0 to 100&quot;]" />
-          <ui:LogMessage DisplayName="Log Message: Invalid" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Input is invalid! Please enter a number between 0 to 100&quot;]" />
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="This  message is used to display error message " AutoCloseAfter="00:00:00" DisplayName="Message Box : Error message" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Input is invalid! Please enter a number between 0 to 100&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:MessageBox>
+          <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log a error message " DisplayName="Log Message: Invalid" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Input is invalid! Please enter a number between 0 to 100&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
         </Sequence>
       </ui:IfElseIfV2.Else>
       <ui:IfElseIfV2.ElseIfs>
         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
           <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Marks&gt;=60 and Marks&lt;80]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
             <ui:IfElseIfBlock.Then>
-              <Sequence DisplayName="Body: Marks between 60 - 80" sap:VirtualizedContainerService.HintSize="416,372" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence sap2010:Annotation.AnnotationText="This activity is assigns A for students scoring between 60-80" DisplayName="Body: Marks between 60 - 80" sap:VirtualizedContainerService.HintSize="416,462" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : Score A" sap:VirtualizedContainerService.HintSize="353.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is A&quot;]" />
-                <ui:LogMessage DisplayName="Log Message:Score A" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is A&quot;]" />
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to dsplay students grade " AutoCloseAfter="00:00:00" DisplayName="Message Box : Score A" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is A&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:MessageBox>
+                <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log  students grade " DisplayName="Log Message:Score A" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is A&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
               </Sequence>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
           <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Marks &gt;50 and Marks&lt;=60]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
             <ui:IfElseIfBlock.Then>
-              <Sequence DisplayName="Body : Marks between 50 - 60 " sap:VirtualizedContainerService.HintSize="416,372" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence sap2010:Annotation.AnnotationText="This message assigns B grade  for students scoring from 50-60 " DisplayName="Body : Marks between 50 - 60 " sap:VirtualizedContainerService.HintSize="416,473" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : Scored B " sap:VirtualizedContainerService.HintSize="353.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is B&quot;]" />
-                <ui:LogMessage DisplayName="Log Message  : Scored B " sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is B&quot;]" />
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="This activity displays students grade as B " AutoCloseAfter="00:00:00" DisplayName="Message Box : Scored B " sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is B&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:MessageBox>
+                <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message about students grade " DisplayName="Log Message  : Scored B " sap:VirtualizedContainerService.HintSize="354,206" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is B&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
               </Sequence>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
           <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Marks&lt;=50 and Marks&gt;=0]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_3">
             <ui:IfElseIfBlock.Then>
-              <Sequence DisplayName="Body Marks less than 50" sap:VirtualizedContainerService.HintSize="416,372" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence sap2010:Annotation.AnnotationText="this activity is used to assign grade if marks is less than 50" DisplayName="Body Marks less than 50" sap:VirtualizedContainerService.HintSize="416,473" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box Scored C" sap:VirtualizedContainerService.HintSize="353.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is C&quot;]" />
-                <ui:LogMessage DisplayName="Log Message: Score C" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is C&quot;]" />
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="This Activity is used to display students grade " AutoCloseAfter="00:00:00" DisplayName="Message Box Scored C" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is C&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:MessageBox>
+                <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to log message about students grade " DisplayName="Log Message: Score C" sap:VirtualizedContainerService.HintSize="354,206" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is C&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
               </Sequence>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
         </sc:BindingList>
       </ui:IfElseIfV2.ElseIfs>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <ui:IfElseIfV2.Then>
-        <Sequence DisplayName="Then : Marks above 80" sap:VirtualizedContainerService.HintSize="416,372" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap2010:Annotation.AnnotationText="This activity assigns students grade as A+ if marks is above 90 " DisplayName="Then : Marks above 80" sap:VirtualizedContainerService.HintSize="416,462" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : Scored A+" sap:VirtualizedContainerService.HintSize="353.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is A+&quot;]" />
-          <ui:LogMessage DisplayName="Log Message: Scored A+" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is A+&quot;]" />
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="This activity is used to Display the grade of 90+ marks " AutoCloseAfter="00:00:00" DisplayName="Message Box : Scored A+" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is A+&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:MessageBox>
+          <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to Display log message of  grade " DisplayName="Log Message: Scored A+" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;The student score is &quot; + Marks.ToString + &quot; and grade is A+&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
         </Sequence>
       </ui:IfElseIfV2.Then>
     </ui:IfElseIfV2>

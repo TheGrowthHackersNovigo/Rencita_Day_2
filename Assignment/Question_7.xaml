@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question7" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822.4,1004.8" sap2010:WorkflowViewState.IdRef="Question7_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question7" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="887,1339" sap2010:WorkflowViewState.IdRef="Question7_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -76,7 +76,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Question7:Sum of First N numbers " sap:VirtualizedContainerService.HintSize="545.6,1114.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Question7:Sum of First N numbers " sap:VirtualizedContainerService.HintSize="546,1274" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="UpperLimit" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="sum" />
@@ -86,7 +86,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Ask user to enter a number " DisplayName="Input Dialog : User Input" sap:VirtualizedContainerService.HintSize="483.2,304.8" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label=" Enter the number (to find sum upto which number ? )" Title="Sum of First N numbers">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Ask user to enter a number " DisplayName="Input Dialog : User Input" sap:VirtualizedContainerService.HintSize="484,302" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label=" Enter the number (to find sum upto which number ? )" Title="Sum of First N numbers">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:Int32">[UpperLimit]</OutArgument>
       </ui:InputDialog.Result>
@@ -98,29 +98,53 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InputDialog>
-    <ui:LogMessage DisplayName="Log Message : Display target number" sap:VirtualizedContainerService.HintSize="483.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;The   user entered&quot; + UpperLimit.ToString]" />
-    <ParallelForEach x:TypeArguments="x:Int32" DisplayName="Parallel For Each : Iterate natural numbers" sap:VirtualizedContainerService.HintSize="483.2,263.2" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_1" Values="[Enumerable.Range(1, UpperLimit)]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is used to display log message of users input " DisplayName="Log Message : Display target number" sap:VirtualizedContainerService.HintSize="484,215" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;The   user entered&quot; + UpperLimit.ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ParallelForEach x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="This activity is used to iterate the loop " DisplayName="Parallel For Each : Iterate natural numbers" sap:VirtualizedContainerService.HintSize="484,326" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_1" Values="[Enumerable.Range(1, UpperLimit)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ActivityAction x:TypeArguments="x:Int32">
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="x:Int32" Name="item" />
         </ActivityAction.Argument>
-        <Assign DisplayName="Assign : Evaluate the sum" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign sap2010:Annotation.AnnotationText="This activity is used to store the sum " DisplayName="Assign : Evaluate the sum" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_1">
           <Assign.To>
             <OutArgument x:TypeArguments="x:Int32">[sum]</OutArgument>
           </Assign.To>
           <Assign.Value>
             <InArgument x:TypeArguments="x:Int32">[sum+item]</InArgument>
           </Assign.Value>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
         </Assign>
       </ActivityAction>
     </ParallelForEach>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : Display sum" sap:VirtualizedContainerService.HintSize="483.2,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;The sum of First&quot; + UpperLimit.ToString + &quot;Is&quot; +sum.ToString]" />
-    <ui:LogMessage DisplayName="Log Message: Total sum" sap:VirtualizedContainerService.HintSize="483.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;The sum of First&quot; + UpperLimit.ToString + &quot;Is&quot; +sum.ToString]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Thi activity is used to display the sum " AutoCloseAfter="00:00:00" DisplayName="Message Box : Display sum" sap:VirtualizedContainerService.HintSize="484,148" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;The sum of First&quot; + UpperLimit.ToString + &quot;Is&quot; +sum.ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MessageBox>
+    <ui:LogMessage sap2010:Annotation.AnnotationText="This activity is use to log value of sum " DisplayName="Log Message: Total sum" sap:VirtualizedContainerService.HintSize="484,195" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;The sum of First&quot; + UpperLimit.ToString + &quot;Is&quot; +sum.ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
   </Sequence>
 </Activity>
