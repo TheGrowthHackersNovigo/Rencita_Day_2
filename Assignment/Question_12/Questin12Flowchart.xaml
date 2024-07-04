@@ -74,43 +74,43 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Questin12Flowchart" sap:VirtualizedContainerService.HintSize="882.4,534.4" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Questin12Flowchart" sap:VirtualizedContainerService.HintSize="947,420" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Int32" Name="Income" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <av:Size x:Key="ShapeSize">49.6,49.6</av:Size>
+        <av:Size x:Key="ShapeSize">50,50</av:Size>
         <av:Point x:Key="ShapeLocation">445,35</av:Point>
         <av:PointCollection x:Key="ConnectorLocation">470,85 470,145</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID13</x:Reference>
+      <x:Reference>__ReferenceID14</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID13">
+    <FlowStep x:Name="__ReferenceID14">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">415,145</av:Point>
-          <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+          <av:Size x:Key="ShapeSize">110,70</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">470,215 470,245 469.5,245 469.5,290</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog: Users Input " sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the income tax " Title="Income Tax Evaluator">
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog: Users Input " sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the income tax " Title="Income Tax Evaluator">
         <ui:InputDialog.Result>
           <OutArgument x:TypeArguments="x:Int32">[Income]</OutArgument>
         </ui:InputDialog.Result>
       </ui:InputDialog>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID0" Condition="[Income&lt;=25000 and Income&gt;0]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <FlowDecision x:Name="__ReferenceID0" Condition="[Income&lt;=25000 and Income&gt;0]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">440,290</av:Point>
-              <av:Size x:Key="ShapeSize">60,60</av:Size>
+              <av:Size x:Key="ShapeSize">59,59</av:Size>
               <av:PointCollection x:Key="TrueConnector">440,320 410,320 410,320.2 325.4,320.2</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">470,350 470,450</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">469.5,349 469.5,379 470,379 470,450</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
@@ -118,33 +118,33 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">215,285</av:Point>
-                  <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                  <av:Size x:Key="ShapeSize">110,70</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">215,320.2 155.4,320.2</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : No tax is included " sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Yippee!!No tax included&quot;]" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : No tax is included " sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Yippee!!No tax included&quot;]" />
               <FlowStep.Next>
                 <FlowStep x:Name="__ReferenceID5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">45,285</av:Point>
-                      <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                      <av:Size x:Key="ShapeSize">110,70</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message: No tax is included " sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Yippee!!No tax included&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message: No tax is included " sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Yippee!!No tax included&quot;]" />
                 </FlowStep>
               </FlowStep.Next>
             </FlowStep>
           </FlowDecision.True>
           <FlowDecision.False>
-            <FlowDecision x:Name="__ReferenceID1" Condition="[Income &gt; 25000 and Income &lt;=50000]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+            <FlowDecision x:Name="__ReferenceID1" Condition="[Income &gt; 25000 and Income &lt;=50000]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <av:Point x:Key="ShapeLocation">440,450</av:Point>
-                  <av:Size x:Key="ShapeSize">60,60</av:Size>
+                  <av:Size x:Key="ShapeSize">59,59</av:Size>
                   <av:PointCollection x:Key="TrueConnector">440,480 410,480 410,480.2 325.4,480.2</av:PointCollection>
-                  <av:PointCollection x:Key="FalseConnector">470,510 470,540 469.6,540 469.6,610</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">469.5,509 469.5,539 470,539 470,610</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
@@ -152,99 +152,111 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">215,445</av:Point>
-                      <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                      <av:Size x:Key="ShapeSize">110,70</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">215,480 145,480</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box: 5% tax" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Your income is &quot; + Income.ToString + &quot;Your total tax is &quot; + ((5/100)*Income).ToString]" />
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box: 5% tax" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Your income is &quot; + Income.ToString + &quot;Your total tax is &quot; + ((5/100)*Income).ToString]" />
+                  <FlowStep.Next>
+                    <FlowStep x:Name="__ReferenceID7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">35,445</av:Point>
+                          <av:Size x:Key="ShapeSize">110,70</av:Size>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message : 5% tax" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Your income is &quot; + Income.ToString + &quot;Your total tax is &quot; + ((5/100)*Income).ToString]" />
+                    </FlowStep>
+                  </FlowStep.Next>
                 </FlowStep>
               </FlowDecision.True>
               <FlowDecision.False>
-                <FlowDecision x:Name="__ReferenceID2" Condition="[Income&gt;50000 and Income&lt;=100000]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                <FlowDecision x:Name="__ReferenceID2" Condition="[Income&gt;50000 and Income&lt;=100000]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">440,610</av:Point>
-                      <av:Size x:Key="ShapeSize">60,60</av:Size>
+                      <av:Size x:Key="ShapeSize">59,59</av:Size>
                       <av:PointCollection x:Key="TrueConnector">440,640 410,640 410,640.2 325.4,640.2</av:PointCollection>
-                      <av:PointCollection x:Key="FalseConnector">470,670 470,700 469.6,700 469.6,760</av:PointCollection>
+                      <av:PointCollection x:Key="FalseConnector">469.5,669 469.5,760</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
-                    <FlowStep x:Name="__ReferenceID7">
+                    <FlowStep x:Name="__ReferenceID8">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">215,605</av:Point>
-                          <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                          <av:Size x:Key="ShapeSize">110,70</av:Size>
                           <av:PointCollection x:Key="ConnectorLocation">215,640.2 145.4,640.2</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box: 15% tax" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;Your income is &quot; + Income.ToString + &quot;Your total tax is &quot; + ((20/100)*Income).ToString]" />
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box: 15% tax" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;Your income is &quot; + Income.ToString + &quot;Your total tax is &quot; + ((20/100)*Income).ToString]" />
                       <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID8">
+                        <FlowStep x:Name="__ReferenceID9">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">35,605</av:Point>
-                              <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                              <av:Size x:Key="ShapeSize">110,70</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message : 15% tax" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Your income is &quot; + Income.ToString + &quot;Your total tax is &quot; + ((20/100)*Income).ToString]" />
+                          <ui:LogMessage DisplayName="Log Message : 15% tax" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Your income is &quot; + Income.ToString + &quot;Your total tax is &quot; + ((20/100)*Income).ToString]" />
                         </FlowStep>
                       </FlowStep.Next>
                     </FlowStep>
                   </FlowDecision.True>
                   <FlowDecision.False>
-                    <FlowDecision x:Name="__ReferenceID3" Condition="[Income&gt;100000]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
+                    <FlowDecision x:Name="__ReferenceID3" Condition="[Income&gt;100000]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <av:Point x:Key="ShapeLocation">440,760</av:Point>
-                          <av:Size x:Key="ShapeSize">60,60</av:Size>
-                          <av:PointCollection x:Key="FalseConnector">470,820 470,849.9999999999999 470.2,849.9999999999999 470.2,915</av:PointCollection>
+                          <av:Size x:Key="ShapeSize">59,59</av:Size>
+                          <av:PointCollection x:Key="FalseConnector">469.5,819 469.5,849 470,849 470,915</av:PointCollection>
                           <av:PointCollection x:Key="TrueConnector">440,790 410,790 410,790.2 335.4,790.2</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <FlowDecision.True>
-                        <FlowStep x:Name="__ReferenceID9">
+                        <FlowStep x:Name="__ReferenceID10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">225,755</av:Point>
-                              <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                              <av:Size x:Key="ShapeSize">110,70</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">225,790.2 145.4,790.2</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : 25% tax" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Your income is &quot; + Income.ToString + &quot;Your total tax is &quot; + ((25/100)*Income).ToString]" />
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : 25% tax" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Your income is &quot; + Income.ToString + &quot;Your total tax is &quot; + ((25/100)*Income).ToString]" />
                           <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID10">
+                            <FlowStep x:Name="__ReferenceID11">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">35,755</av:Point>
-                                  <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                                  <av:Size x:Key="ShapeSize">110,70</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message: 25% tax" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Your income is &quot; + Income.ToString + &quot;Your total tax is &quot; + ((25/100)*Income).ToString]" />
+                              <ui:LogMessage DisplayName="Log Message: 25% tax" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Your income is &quot; + Income.ToString + &quot;Your total tax is &quot; + ((25/100)*Income).ToString]" />
                             </FlowStep>
                           </FlowStep.Next>
                         </FlowStep>
                       </FlowDecision.True>
                       <FlowDecision.False>
-                        <FlowStep x:Name="__ReferenceID11">
+                        <FlowStep x:Name="__ReferenceID12">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">415,915</av:Point>
-                              <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                              <av:Size x:Key="ShapeSize">110,70</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">470.2,985.4 470.2,1055</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : Error message" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;Please enter a valid input&quot;]" />
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box : Error message" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;Please enter a valid input&quot;]" />
                           <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID12">
+                            <FlowStep x:Name="__ReferenceID13">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">415,1055</av:Point>
-                                  <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                                  <av:Size x:Key="ShapeSize">110,70</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message : Error message" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Please enter a valid input&quot;]" />
+                              <ui:LogMessage DisplayName="Log Message : Error message" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Please enter a valid input&quot;]" />
                             </FlowStep>
                           </FlowStep.Next>
                         </FlowStep>
@@ -265,20 +277,12 @@
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
     <x:Reference>__ReferenceID6</x:Reference>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">35,445</av:Point>
-          <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message : 5% tax" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Your income is &quot; + Income.ToString + &quot;Your total tax is &quot; + ((5/100)*Income).ToString]" />
-    </FlowStep>
     <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
     <x:Reference>__ReferenceID9</x:Reference>
     <x:Reference>__ReferenceID10</x:Reference>
     <x:Reference>__ReferenceID11</x:Reference>
     <x:Reference>__ReferenceID12</x:Reference>
+    <x:Reference>__ReferenceID13</x:Reference>
   </Flowchart>
 </Activity>

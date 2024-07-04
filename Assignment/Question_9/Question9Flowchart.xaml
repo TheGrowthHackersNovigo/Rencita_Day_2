@@ -74,7 +74,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Question9" sap:VirtualizedContainerService.HintSize="947,606" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Question9" sap:VirtualizedContainerService.HintSize="947,420" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Int32" Name="Marks" />
     </Flowchart.Variables>
@@ -97,7 +97,7 @@
           <av:PointCollection x:Key="ConnectorLocation">470,215 470,245 469.5,245 469.5,270</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="enter the students marks " Title="Grade Calculator">
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog : Ask users input " sap:VirtualizedContainerService.HintSize="334,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="enter the students marks " Title="Grade Calculator">
         <ui:InputDialog.Result>
           <OutArgument x:TypeArguments="x:Int32">[Marks]</OutArgument>
         </ui:InputDialog.Result>
@@ -205,10 +205,7 @@
                     </FlowStep>
                   </FlowDecision.True>
                   <FlowDecision.False>
-                    <FlowDecision x:Name="__ReferenceID13" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
-                      <FlowDecision.Condition>
-                        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="Marks&lt;=50 and Marks&gt;=0" />
-                      </FlowDecision.Condition>
+                    <FlowDecision x:Name="__ReferenceID13" Condition="[Marks&lt;=50 and Marks&gt;=0]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
