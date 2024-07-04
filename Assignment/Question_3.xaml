@@ -82,7 +82,6 @@
       <Variable x:TypeArguments="x:Int32" Name="FirstNumber" />
       <Variable x:TypeArguments="x:Int32" Name="SecondNumber" />
       <Variable x:TypeArguments="x:Int32" Name="Largest" />
-      <Variable x:TypeArguments="x:Int32" Name="LCM" />
       <Variable x:TypeArguments="x:Boolean" Name="IsLCM">
         <Variable.Default>
           <Literal x:TypeArguments="x:Boolean" Value="True" />
@@ -203,7 +202,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign DisplayName="Assign : IsLCM" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_6">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[IsLCM]</OutArgument>
                   </Assign.To>
