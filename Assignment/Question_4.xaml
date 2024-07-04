@@ -97,7 +97,7 @@
         <OutArgument x:TypeArguments="x:String">[LeapYear]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[if(((Year mod 400 = 0 AND Year mod 100&lt;&gt;0) OR (Year mod 4=0)),Year.ToString+ "is a leap yar" , Year.ToString+"is not a leap year")]</InArgument>
+        <InArgument x:TypeArguments="x:String">[if(((Year mod 4 = 0 AND Year mod 100&lt;&gt;0) OR (Year mod 400=0)),Year.ToString+ "is a leap yar" , Year.ToString+"is not a leap year")]</InArgument>
       </Assign.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
